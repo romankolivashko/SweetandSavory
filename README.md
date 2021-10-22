@@ -1,6 +1,6 @@
 # Sweet and Savory Treats
 
-#### MVC web application with user authentication and a many-to-many relationship. 
+#### MVC web application with user authentication and a many-to-many SQL relationships. 
 
 #### By Roman Kolivashko
 
