@@ -39,7 +39,7 @@
   4. Select `roman_kolivashko.sql` from project's root directory
   5. Next to `Default Target Schema` option select `New`, give the name of your liking
   6. Click `Start Import` button
-  7. Create `appsettings.json` file in `/Factory.Solution/Factory` directory, make sure to append following to that file:
+  7. Create `appsettings.json` file in `/SweetAndSavory.Solution/SweetAndSavory` directory, make sure to append following to that file:
   ```
   {
     "ConnectionStrings": {
