@@ -7,10 +7,11 @@
 <h2>Flavor Details</h2>
 <hr />
 <h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
+<br>
 
 @if(@Model.JoinEntities.Count == 0)
 {
-  <p>No treats with the flavor</p>
+  <p>No treats with this flavor</p>
 }
 else
 {
@@ -22,7 +23,7 @@ else
   }
   </ul>
 }
-
-<p>@Html.ActionLink("Back to flavors", "Index")</p>
-<p>@Html.ActionLink("Edit Flavor", "Edit", new { id = Model.FlavorId })</p>
-<p>@Html.ActionLink("Delete Flavor", "Delete", new { id = Model.FlavorId })</p>
+<br>
+<button type="button" class="btn-link">@Html.ActionLink("Back to flavors", "Index")</button>
+<button type="button" class="btn-link">@Html.ActionLink("Edit Flavor", "Edit", new { id = Model.FlavorId })</button>
+<button type="button" class="btn-link">@Html.ActionLink("Delete Flavor", "Delete", new { id = Model.FlavorId })</button>
