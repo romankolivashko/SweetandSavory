@@ -1,18 +1,18 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
-using SweetandSavory.Models;
+using SweetAndSavory.Models;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace SweetandSavory.Controllers
+namespace SweetAndSavory.Controllers
 {
   
   public class FlavorsController : Controller
   {
-    private readonly SweetandSavoryContext _db;
+    private readonly SweetAndSavoryContext _db;
 
-    public FlavorsController(SweetandSavoryContext db)
+    public FlavorsController(SweetAndSavoryContext db)
     {
       _db = db;
     }
@@ -42,14 +42,14 @@ namespace SweetandSavory.Controllers
     {
       var thisFlavor = _db.Flavors
           .Include(flavor => flavor.JoinEntities)
-          .ThenInclude(join => join.Item)
+          .ThenInclude(join => join.Treat)
           .FirstOrDefault(flavor => flavor.FlavorId == id);
       return View(thisFlavor);
     }
     public ActionResult Edit(int id)
     {
       var thisFlavor = _db.Flavors.FirstOrDefault(flavor => flavor.FlavorId == id);
-      return View thisFlavor);
+      return View (thisFlavor);
     }
 
     [HttpPost]

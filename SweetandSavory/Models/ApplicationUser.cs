@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 
-namespace SweetandSavory.Models
+namespace SweetAndSavory.Models
 {
     public class ApplicationUser : IdentityUser
     {

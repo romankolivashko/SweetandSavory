@@ -3,23 +3,23 @@ using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
 using System.IO;
 
-namespace SweetandSavory.Models
+namespace SweetAndSavory.Models
 {
-  public class SweetandSavoryContextFactory : IDesignTimeDbContextFactory<SweetandSavoryContext>
+  public class SweetAndSavoryContextFactory : IDesignTimeDbContextFactory<SweetAndSavoryContext>
   {
 
-    SweetandSavoryContext IDesignTimeDbContextFactory<SweetandSavoryContext>.CreateDbContext(string[] args)
+    SweetAndSavoryContext IDesignTimeDbContextFactory<SweetAndSavoryContext>.CreateDbContext(string[] args)
     {
       IConfigurationRoot configuration = new ConfigurationBuilder()
           .SetBasePath(Directory.GetCurrentDirectory())
           .AddJsonFile("appsettings.json")
           .Build();
 
-      var builder = new DbContextOptionsBuilder<SweetandSavoryContext>();
+      var builder = new DbContextOptionsBuilder<SweetAndSavoryContext>();
 
       builder.UseMySql(configuration["ConnectionStrings:DefaultConnection"], ServerVersion.AutoDetect(configuration["ConnectionStrings:DefaultConnection"]));
 
-      return new SweetandSavoryContext(builder.Options);
+      return new SweetAndSavoryContext(builder.Options);
     }
   }
 }

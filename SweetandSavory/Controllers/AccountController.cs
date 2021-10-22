@@ -1,18 +1,18 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Identity;
-using SweetandSavory.Models;
+using SweetAndSavory.Models;
 using System.Threading.Tasks;
-using SweetandSavory.ViewModels;
+using SweetAndSavory.ViewModels;
 
-namespace SweetandSavory.Controllers
+namespace SweetAndSavory.Controllers
 {
     public class AccountController : Controller
     {
-        private readonly SweetandSavoryContext _db;
+        private readonly SweetAndSavoryContext _db;
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
 
-        public AccountController (UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, SweetandSavoryContext db)
+        public AccountController (UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, SweetAndSavoryContext db)
         {
             _userManager = userManager;
             _signInManager = signInManager;

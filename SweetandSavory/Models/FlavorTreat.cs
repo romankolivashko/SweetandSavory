@@ -1,11 +1,11 @@
-namespace SweetandSavory.Models
+namespace SweetAndSavory.Models
 {
-  public class CategoryItem
+  public class FlavorTreat
   {       
-    public int CategoryItemId { get; set; }
-    public int ItemId { get; set; }
-    public int CategoryId { get; set; }
-    public virtual Item Item { get; set; }
-    public virtual Category Category { get; set; }
+    public int FlavorTreatId { get; set; }
+    public int TreatId { get; set; }
+    public int FlavorId { get; set; }
+    public virtual Treat Treat { get; set; }
+    public virtual Flavor Flavor { get; set; }
   }
 }
