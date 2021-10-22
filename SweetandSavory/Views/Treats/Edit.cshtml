@@ -4,21 +4,23 @@
 
 @model SweetAndSavory.Models.Treat
 
-<h2>Edit</h2>
-
-<h4>Edit this treat: @Html.DisplayFor(model => model.Description)</h4>
+<h2>Edit @Html.DisplayFor(model => model.Description) treat</h2>
+<hr />
+<br>
 
 @using (Html.BeginForm())
 {
   @Html.HiddenFor(model => model.TreatId)
-
   @Html.LabelFor(model => model.Description)
+  <span>&nbsp;</span>
   @Html.EditorFor(model => model.Description)
-
+  <span>&nbsp;&nbsp;</span>
   @Html.Label("Select flavor")
+  <span>&nbsp;</span>
   @Html.DropDownList("FlavorId")
-
+  <br><br>
   <input type="submit" value="Save" />
 }
-
-<p>@Html.ActionLink("Back to list", "Index")</p>
+<br>
+<button type="button" class="btn-link">@Html.ActionLink("Back to list", "Index")</button>
+<button type="button" class="btn-link">@Html.ActionLink("Home", "Index", "Home")</button>

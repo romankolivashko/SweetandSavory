@@ -7,7 +7,6 @@
 <h2>Flavor Details</h2>
 <hr />
 <h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
-<br>
 
 @if(@Model.JoinEntities.Count == 0)
 {
@@ -15,11 +14,12 @@
 }
 else
 {
-  <h4>Treats of the flavor:</h4>
+  <h3>All treats with this flavor:</h3>
+  <br>
   <ul>
   @foreach(var join in Model.JoinEntities)
   {
-    <li>@join.Treat.Description</li>
+    <li>✓ @join.Treat.Description</li>
   }
   </ul>
 }
@@ -27,3 +27,4 @@ else
 <button type="button" class="btn-link">@Html.ActionLink("Back to flavors", "Index")</button>
 <button type="button" class="btn-link">@Html.ActionLink("Edit Flavor", "Edit", new { id = Model.FlavorId })</button>
 <button type="button" class="btn-link">@Html.ActionLink("Delete Flavor", "Delete", new { id = Model.FlavorId })</button>
+<button type="button" class="btn-link">@Html.ActionLink("Home", "Index", "Home")</button>

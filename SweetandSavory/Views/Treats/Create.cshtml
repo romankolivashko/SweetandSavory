@@ -4,20 +4,24 @@
 
 @model SweetAndSavory.Models.Treat
 
-<h4>Add a new treat</h4>
+<h2>Add a new treat</h2>
+<hr />
+<br>
 
 @using (Html.BeginForm())
 {
-  @Html.LabelFor(model => model.Description)
-  @Html.TextBoxFor(model => model.Description)
-  <br>
-  @Html.LabelFor(model => model.Price)
+  @Html.LabelFor(model => model.Description)<span>&nbsp;&nbsp;</span>
+  @Html.TextBoxFor(model => model.Description)<span>&nbsp;&nbsp;&nbsp;</span>
+  <!-- in case price will be required -->
+  <!-- @Html.LabelFor(model => model.Price)<span>&nbsp;&nbsp;</span>
   @Html.TextBoxFor(model => model.Price, new {type="number", min="0"})
-  <br>
-  @Html.Label("Select flavor")
+  <br> -->
+  @Html.Label("Flavor")<span>&nbsp;</span>
   @Html.DropDownList("FlavorId")
-
-  <input type="submit" value="Add new treat" class="btn btn-default" />
+  <br><br>
+  <input type="submit" value="Add new treat" />
 }
 
-<p>@Html.ActionLink("Show all treats", "Index")</p>
+<br>
+<button type="button" class="btn-link">@Html.ActionLink("Show all treats", "Index")</button>
+<button type="button" class="btn-link">@Html.ActionLink("Home", "Index", "Home")</button>

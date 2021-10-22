@@ -4,10 +4,9 @@
 
 @model SweetAndSavory.Models.Treat
 
-<h2>Add a flavor</h2>
-
-<h4>Add a flavor to this treat: @Html.DisplayFor(model => model.Description)</h4>
-
+<h2>Add a flavor to @Html.DisplayFor(model => model.Description)</h2>
+<hr />
+<br>
 @using (Html.BeginForm())
 {
   @Html.HiddenFor(model => model.TreatId)
@@ -17,5 +16,6 @@
 
   <input type="submit" value="Save" />
 }
-
-<p>@Html.ActionLink("Back to list", "Index")</p>
+<br>
+<button type="button" class="btn-link">@Html.ActionLink("Back to list", "Index")</button>
+<button type="button" class="btn-link">@Html.ActionLink("Home", "Index", "Home")</button>

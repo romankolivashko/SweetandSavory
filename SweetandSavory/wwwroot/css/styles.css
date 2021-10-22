@@ -55,6 +55,11 @@ input, textarea {
 	color: rgb(42, 41, 41);
 }
 
+.dropdownlist {
+	background-color:rgb(241, 234, 234);
+	color: rgb(42, 41, 41);
+}
+
 .label-1 {
 	margin-right: 202px;
 }
