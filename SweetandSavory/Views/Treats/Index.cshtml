@@ -1,0 +1,40 @@
+@{
+  Layout = "_Layout";
+}
+
+@using SweetAndSavory.Models;
+@model IEnumerable<SweetAndSavory.Models.Treat>
+
+<h1>Treats for @User.Identity.Name</h1>
+
+@if (Model.Any())
+{
+  <ul>
+    @foreach (Treat treat in Model)
+    {
+      <li>@Html.ActionLink($"{treat.Description}", "Details", new { id = treat.TreatId })</li>
+    }
+  </ul>
+} 
+else
+{
+  <h3>No treats have been added yet!</h3>
+}
+
+<!-- <div class="row">
+<div class="col">col1</div>
+<div class="col">col2</div>
+</div> -->
+
+<div class="row">
+  <div class="col">
+      @Html.ActionLink("Add new treat", "Create")
+  </div>
+  <div class="col">
+     @Html.ActionLink("Home", "Index", "Home")
+  </div>
+</div>
+
+
+
+
