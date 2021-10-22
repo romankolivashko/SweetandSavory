@@ -17,6 +17,8 @@
     @Html.LabelFor(m => m.Password)
     <span> </span>
     @Html.PasswordFor(m => m.Password)
-
-    <input type="submit" value="Log in" class="btn btn-default" />
+    <br><br>
+    <input type="submit" value="Log in" />
+    <br><br>
+    <p>@Html.ActionLink("Home", "Index", "Home")</p>
 }

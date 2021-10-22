@@ -25,4 +25,6 @@
     @Html.PasswordFor(user=> user.ConfirmPassword, htmlAttributes: new { @class = "input"})
     <br><br>
     <input type="submit" value="Register" />
+    <br><br>
+    <p>@Html.ActionLink("Home", "Index", "Home")</p>
 }
