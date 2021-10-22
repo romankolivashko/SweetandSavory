@@ -1,0 +1,68 @@
+﻿/* @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap'); */
+
+@font-face {
+  font-family: myFont;
+  src: url('../fonts/KGBrokenVesselsSketch.ttf');
+}
+ 
+ div#footer {
+	position:fixed;
+	bottom:0px;
+	left:0px;
+	width:100%;
+	color:#CCC;
+	background:#333;
+	padding:8px;
+	text-align: center;
+	font-size: small;
+} 
+
+
+body {
+  background: url("../img/wooden_bg.jpg") center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+	/* font-family: 'Architects Daughter', cursive; */
+	font-family: 'myFont', sans-serif;
+	font-size: 18pt;
+	color: #fff;
+}
+
+.container {
+	margin-top: 11em;
+}
+
+.jumbotron {
+	/* background-color: rgb(47, 43, 43); */
+	width: auto;
+	background-image: url("../img/bb_bg.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	text-align: center;
+}
+
+a {
+	color: rgb(219, 199, 199);
+}
+
+ul {
+  list-style-type: none;
+}
+
+input, textarea {
+	background-color:rgb(241, 234, 234);
+	color: rgb(42, 41, 41);
+}
+
+.label-1 {
+	margin-right: 202px;
+}
+
+.label-2 {
+	margin-right: 151px;
+}
+
+.label-3 {
+	margin-right: 45px;
+}

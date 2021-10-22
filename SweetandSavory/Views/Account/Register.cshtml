@@ -10,14 +10,19 @@
 <hr />
 @using (Html.BeginForm("Register", "Account", FormMethod.Post))
 {
-    @Html.LabelFor(user => user.Email)
-    @Html.TextBoxFor(user=> user.Email)
+    <!-- @Html.LabelFor(user => user.Email, htmlAttributes: new { @class = "control-label col-md-2" , @style = "float: left;text-align: left;" }) -->
+    @Html.LabelFor(user => user.Email, htmlAttributes: new { @class = "label-1"})
+    <span>  </span>
+    @Html.TextBoxFor(user=> user.Email, htmlAttributes: new { @class = "input"})
+    <br>
+    @Html.LabelFor(user=> user.Password, htmlAttributes: new { @class = "label-2"})
+    <span> </span>
+    @Html.PasswordFor(user=> user.Password, htmlAttributes: new { @class = "input"})
+    <br>
 
-    @Html.LabelFor(user=> user.Password)
-    @Html.PasswordFor(user=> user.Password)
-
-    @Html.LabelFor(user=> user.ConfirmPassword)
-    @Html.PasswordFor(user=> user.ConfirmPassword)
-
+    @Html.LabelFor(user=> user.ConfirmPassword, htmlAttributes: new { @class = "label-3"})
+    <span> </span>
+    @Html.PasswordFor(user=> user.ConfirmPassword, htmlAttributes: new { @class = "input"})
+    <br><br>
     <input type="submit" value="Register" />
 }
