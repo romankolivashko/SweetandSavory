@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace SweetAndSavory.Controllers
 {
-  
+  [Authorize]
   public class FlavorsController : Controller
   {
     private readonly SweetAndSavoryContext _db;
@@ -24,7 +24,7 @@ namespace SweetAndSavory.Controllers
       return View(model);
     }
 
-    [Authorize]
+    
     public ActionResult Create()
     {
       return View();
@@ -46,6 +46,7 @@ namespace SweetAndSavory.Controllers
           .FirstOrDefault(flavor => flavor.FlavorId == id);
       return View(thisFlavor);
     }
+
     public ActionResult Edit(int id)
     {
       var thisFlavor = _db.Flavors.FirstOrDefault(flavor => flavor.FlavorId == id);

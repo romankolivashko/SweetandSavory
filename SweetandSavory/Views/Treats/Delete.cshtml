@@ -4,11 +4,13 @@
 
 @model SweetAndSavory.Models.Treat
 
-<h2>Are you sure you want to delete this?</h2>
-
-@Html.DisplayNameFor(model => model.Description): @Html.DisplayFor(model => model.Description)
+<h2>Are you sure you want to delete @Html.DisplayFor(model => model.Description)?</h2>
+<br>
+<!-- @Html.DisplayNameFor(model => model.Description): @Html.DisplayFor(model => model.Description) -->
 @using (Html.BeginForm())
 {
-  <input type="submit" value="Delete" />
+  <input type="submit" value="Yes, I'm sure!" />
 }
-@Html.ActionLink("Back to List", "Index")
+<br>
+<button type="button" class="btn-link">@Html.ActionLink("Back to List", "Index")</button>
+<button type="button" class="btn-link">@Html.ActionLink("Home", "Index", "Home")</button>

@@ -9,7 +9,7 @@ using SweetAndSavory.Models;
 namespace SweatAndSavory.Migrations
 {
     [DbContext(typeof(SweetAndSavoryContext))]
-    [Migration("20211022173524_Initial")]
+    [Migration("20211022225337_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
