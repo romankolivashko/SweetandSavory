@@ -2,8 +2,60 @@
   Layout = "_Layout";
 }
 
+@using SweetAndSavory.Models
+@model SweetAndSavory.Models.Treat
+
 <h1>Sweet And Savory Shop!</h1>
+
+<div class="row justify-content-sm-center">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-4">
+    
+      @if (ViewBag.AllTreatsList.Count == 0)
+      {
+        <h3 class="text-center">No treats have been added yet!</h3>
+      }
+      else
+      {
+        <h2>🍩 Our treats</h2>
+        <br>
+        <ul>
+          @foreach (Treat treat in ViewBag.AllTreatsList)
+          {
+            <li>
+            @treat.Description
+            </li>
+          }
+        </ul>
+      }
+    </div>
+    <div class="col-sm-4">
+    
+      @if (ViewBag.AllFlavorsList.Count == 0)
+      {
+        <h3 class="text-center">No flavors have been added yet!</h3>
+      }
+      else
+      {
+        <h2>🥐 Our flavors</h2>
+        <br>
+        <ul>
+          @foreach (Flavor flavor in ViewBag.AllFlavorsList)
+          {
+            <li>
+            @flavor.Name
+            </li>
+          }
+        </ul>
+      }
+    </div>
+    <div class="col-sm-2"></div>
+</div>
+
 <br>
-<h3>@Html.ActionLink("See all treats", "Index", "Treats")</h3>
-<h3>@Html.ActionLink("See all flavors", "Index", "Flavors")</h3>
-<h3>@Html.ActionLink("Authenticate", "Index", "Account")</h3>
+<button type="button" class="btn-link">@Html.ActionLink("My Account", "Index", "Account")</button>
+<button type="button" class="btn-link">@Html.ActionLink("See all treats", "Index", "Treats")</button>
+<button type="button" class="btn-link">@Html.ActionLink("See all flavors", "Index", "Flavors")</button>
+
+
+

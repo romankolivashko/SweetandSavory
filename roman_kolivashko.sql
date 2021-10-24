@@ -207,7 +207,7 @@ CREATE TABLE `aspnetusers` (
 
 LOCK TABLES `aspnetusers` WRITE;
 /*!40000 ALTER TABLE `aspnetusers` DISABLE KEYS */;
-INSERT INTO `aspnetusers` VALUES ('20dad070-a4a5-472e-9695-92217e28f411','psmith@gmail.com','PSMITH@GMAIL.COM',NULL,NULL,0,'AQAAAAEAACcQAAAAEAtcnO+uJEnx2c7O7prlVSs+at2td9eRuCAtZmTXe99Jt9uOsg6aC0v9INUBwBE+Aw==','A3ZED3PI4CB5K5RNY3PR5RS24365FECN','98a2d168-750e-4bf0-be19-f8a150b5a7e9',NULL,0,0,NULL,1,0);
+INSERT INTO `aspnetusers` VALUES ('20dad070-a4a5-472e-9695-92217e28f411','psmith@gmail.com','PSMITH@GMAIL.COM',NULL,NULL,0,'AQAAAAEAACcQAAAAEAtcnO+uJEnx2c7O7prlVSs+at2td9eRuCAtZmTXe99Jt9uOsg6aC0v9INUBwBE+Aw==','A3ZED3PI4CB5K5RNY3PR5RS24365FECN','98a2d168-750e-4bf0-be19-f8a150b5a7e9',NULL,0,0,NULL,1,0),('b4f03116-92a7-4371-8c34-d7d8f4adc7e9','test@user.com','TEST@USER.COM',NULL,NULL,0,'AQAAAAEAACcQAAAAELcnKjecUuAfI1k9gZMZlsiTgsDvN9mWWZgvCLCSBV13acjGaXrG/N3/aFhtCdBEhg==','PSCPOIRDMUY5XZIV2KLRRR37GVBZNEIF','eaf1e2d7-d4be-4cd3-8fe5-38e98ac9d703',NULL,0,0,NULL,1,0);
 /*!40000 ALTER TABLE `aspnetusers` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -280,7 +280,7 @@ CREATE TABLE `flavortreat` (
   KEY `IX_FlavorTreat_TreatId` (`TreatId`),
   CONSTRAINT `FK_FlavorTreat_Flavors_FlavorId` FOREIGN KEY (`FlavorId`) REFERENCES `flavors` (`FlavorId`) ON DELETE CASCADE,
   CONSTRAINT `FK_FlavorTreat_Treats_TreatId` FOREIGN KEY (`TreatId`) REFERENCES `treats` (`TreatId`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -289,7 +289,7 @@ CREATE TABLE `flavortreat` (
 
 LOCK TABLES `flavortreat` WRITE;
 /*!40000 ALTER TABLE `flavortreat` DISABLE KEYS */;
-INSERT INTO `flavortreat` VALUES (1,1,2),(2,2,3),(3,1,1),(4,2,4),(5,3,5);
+INSERT INTO `flavortreat` VALUES (1,1,2),(2,2,3),(3,1,1),(4,2,4),(5,3,5),(6,4,4),(7,5,2);
 /*!40000 ALTER TABLE `flavortreat` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -308,7 +308,7 @@ CREATE TABLE `treats` (
   PRIMARY KEY (`TreatId`),
   KEY `IX_Treats_UserId` (`UserId`),
   CONSTRAINT `FK_Treats_AspNetUsers_UserId` FOREIGN KEY (`UserId`) REFERENCES `aspnetusers` (`Id`) ON DELETE RESTRICT
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -317,7 +317,7 @@ CREATE TABLE `treats` (
 
 LOCK TABLES `treats` WRITE;
 /*!40000 ALTER TABLE `treats` DISABLE KEYS */;
-INSERT INTO `treats` VALUES (1,'Doughnut',0,'20dad070-a4a5-472e-9695-92217e28f411'),(2,'Glazed muffin',0,'20dad070-a4a5-472e-9695-92217e28f411'),(3,'Croissants',0,'20dad070-a4a5-472e-9695-92217e28f411');
+INSERT INTO `treats` VALUES (1,'Doughnut',0,'20dad070-a4a5-472e-9695-92217e28f411'),(2,'Glazed muffin',0,'20dad070-a4a5-472e-9695-92217e28f411'),(3,'Croissants',0,'20dad070-a4a5-472e-9695-92217e28f411'),(4,'Cookies',0,'20dad070-a4a5-472e-9695-92217e28f411'),(5,'Sandwich',0,'20dad070-a4a5-472e-9695-92217e28f411');
 /*!40000 ALTER TABLE `treats` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -330,4 +330,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-10-22 16:42:33
+-- Dump completed on 2021-10-23 19:10:26
