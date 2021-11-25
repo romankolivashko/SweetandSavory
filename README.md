@@ -1,8 +1,12 @@
 # Sweet and Savory Treats
 
-#### MVC web application with user authentication and a many-to-many SQL relationships. 
+#### MVC web application with use case of Entity Framework and a many-to-many SQL relationships. 
 
 #### By Roman Kolivashko
+
+## Quick look
+
+![](./SweetAndSavory/wwwroot/img/factory.gif)
 
 ## Technologies Used:
 * C#
