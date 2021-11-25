@@ -6,7 +6,7 @@
 
 ## Quick look
 
-![](./SweetAndSavory/wwwroot/img/sweet.gif)
+![](./SweetandSavory/wwwroot/img/sweet.gif)
 
 ## Technologies Used:
 * C#
